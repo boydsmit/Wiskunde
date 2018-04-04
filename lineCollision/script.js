@@ -48,8 +48,23 @@ function  loop()
     m.letSlopeAndPointDefineLine(-1/l.slope,g.point);
     m.draw(0,800);
 
+/*
+    if(g.pos.dy >= l.slope * g.pos.dx + l.yIntercept)
+    {
+        //g.point.color = "red";
+        h.tan.angle += Math.PI;
+        g.vel.sumVector(h.tan,h.rad);
+    }
+    else
+    {
+        //g.point.color = "green";
+    }
+*/
+
     g.update();
     g.point.draw();
+
+
 
     h.pos.dx = l.intersection(m).x;
     h.pos.dy = l.intersection(m).y;
